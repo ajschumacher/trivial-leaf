@@ -5,6 +5,5 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /.*
-  static_files: leaf.html
-  upload: leaf.html
+- url: /
+  script: trivial-leaf.app
