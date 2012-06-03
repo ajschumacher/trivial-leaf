@@ -11,7 +11,7 @@ class RootResponse(webapp2.RequestHandler):
         data_urls = self.request.get_all('d')
         try:
             urlfetch.fetch(url = data_urls[0],
-                           method = urlfetch.POST)
+                           method = urlfetch.PUT)
         except:
             pass
         template_values = {}
