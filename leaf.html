@@ -7,8 +7,10 @@
 </head>
 
 <body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-Hello world!
+<p>Hi! You don't need to do anything here!</p>
+{% if data_url %}
+ <p><a href="{{ data_url }}">Return</a></p>
+{% endif %}
 </body>
 
 </html>

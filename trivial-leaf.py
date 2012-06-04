@@ -14,12 +14,13 @@ class RootResponse(webapp2.RequestHandler):
             pass
         data_urls = self.request.get_all('d')
         try:
-            urlfetch.fetch(url = data_urls[0],
+            data_url = data_urls[0]
+            urlfetch.fetch(url = data_url,
                            payload = json.dumps(response_data),
                            method = urlfetch.PUT)
+            template_values = { 'data_url': data_url }
         except:
-            pass
-        template_values = {}
+            template_values = {}
         path = os.path.join(os.path.dirname(__file__), 'leaf.html')
         self.response.out.write(template.render(path, template_values))
 
