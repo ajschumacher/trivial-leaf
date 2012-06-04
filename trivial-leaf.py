@@ -1,7 +1,5 @@
-import webapp2
-import json
+import webapp2, json, os
 from google.appengine.api import urlfetch
-import os
 from google.appengine.ext.webapp import template
 
 class RootResponse(webapp2.RequestHandler):
